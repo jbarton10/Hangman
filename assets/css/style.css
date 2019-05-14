@@ -6,7 +6,6 @@ body{
 #container{
     max-width:960px;
     margin: 0px auto;
- 
 }
 
 #title{
@@ -23,6 +22,6 @@ body{
 #gameWindow{
     width:480px;
     text-align: center;
-    border: 1px solid #ffffff;
-    background: blue;
+    border: 3px solid #000000;
+    background: #A9A9A9;
 }
