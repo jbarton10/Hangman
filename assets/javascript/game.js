@@ -1,7 +1,12 @@
 
 
-var wordsToGuess = ["mario","donkeykong","link","samus","darksamus","yoshi","kirby","fox","pikachu","luigi","ness"];
+var wordsToGuess = ["mario","donkeykong","link","samus","yoshi","kirby","fox","pikachu","luigi","ness"];
 var charGuess;
+var wins = 0;
+var guessesLeft = 10;
+var charsGuessed = [];
+var audio = new Audio("../sounds/charselect.mp3");
+audio.play;
 
 //MAKE THIS AN ARRAY
 var word2Guess= wordsToGuess[Math.floor(Math.random()*wordsToGuess.length)];
@@ -10,9 +15,9 @@ for(var i = 0; i < word2Guess.length; i++){
     word2GuessArray.push(word2Guess[i]);
  
 }
-var charsGuessed = [];
-var guessesLeft = 10;
-var wins = 0;
+
+
+
 
 //This should probably not inclued a space, otherwise I would think
 //Indexing will be hard later on
@@ -65,10 +70,14 @@ document.onkeyup = function(event){
     document.querySelector("#guessesRemaining").textContent = "Number of guesses remaining: " + guessesLeft;
     document.querySelector("#guessedLetters").textContent = "Letters already guessed: \n" +charsGuessed;
 
-    if (!displayedWordArray.includes("_")){
+    if (!(displayedWordArray.includes("_"))){
+        //Somehow reset game and increment wins
         console.log("we really here")
         wins++
-        var word2Guess= wordsToGuess[Math.floor(Math.random()*wordsToGuess.length)];
+
+    }
+    else if (guessesLeft === 0){
+        //Reset game
     }
 
 }
