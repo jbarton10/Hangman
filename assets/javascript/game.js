@@ -1,26 +1,25 @@
 
-
+//-----------------------------
+//Variables
+//-----------------------------
 var wordsToGuess = ["mario","donkeykong","link","samus","yoshi","kirby","fox","pikachu","luigi","ness"];
 var charGuess;
 var wins = 0;
 var guessesLeft = 10;
 var charsGuessed = [];
+
+
+//Background music
 var audio = new Audio("../sounds/charselect.mp3");
 audio.play;
 
-//MAKE THIS AN ARRAY
+//Variables that need loops
 var word2Guess= wordsToGuess[Math.floor(Math.random()*wordsToGuess.length)];
 var word2GuessArray = [];
 for(var i = 0; i < word2Guess.length; i++){
     word2GuessArray.push(word2Guess[i]);
  
 }
-
-
-
-
-//This should probably not inclued a space, otherwise I would think
-//Indexing will be hard later on
 var displayedWord="_".repeat(word2Guess.length);
 var displayedWordArray =[];
 for(var i = 0; i<displayedWord.length; i++){
