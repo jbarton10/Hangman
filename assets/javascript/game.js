@@ -1,8 +1,8 @@
 
-//-----------------------------
-//Variables
-//-----------------------------
-var wordsToGuess = ["mario","donkeykong","link","samus","yoshi","kirby","fox","pikachu","luigi","ness"];
+//------------------------------------------------------------------------------------------------------
+//                                              Variables
+//------------------------------------------------------------------------------------------------------
+var wordsToGuess = ["mario","donkeykong","link","samus","yoshi","kirby","fox","pikachu","luigi","ness","ganondorf","villager","peach",                          "zelda","sheik","marth","falco","mewtwo","roy","pit","wario","sonic","wolf","pacman","snake","falcon",];
 var charGuess;
 var wins = 0;
 var guessesLeft = 10;
@@ -29,7 +29,7 @@ for(var i = 0; i<displayedWord.length; i++){
 
 
 
-
+//Setting up the Display
 document.querySelector("#wins").textContent = "Wins: " + wins;
 document.querySelector("#currentWord").textContent = "Current word: " + displayedWordArray.join(" ");
 document.querySelector("#guessesRemaining").textContent = "Number of guesses remaining: " + guessesLeft;
@@ -69,14 +69,46 @@ document.onkeyup = function(event){
     document.querySelector("#guessesRemaining").textContent = "Number of guesses remaining: " + guessesLeft;
     document.querySelector("#guessedLetters").textContent = "Letters already guessed: \n" +charsGuessed;
 
+
+
+    //SHOULD WRITE A RESETTING FUNCTION
+    //Winning the game
     if (!(displayedWordArray.includes("_"))){
         //Somehow reset game and increment wins
-        console.log("we really here")
         wins++
+        guessesLeft = 10;
+        charsGuessed=[];
+        word2Guess= wordsToGuess[Math.floor(Math.random()*wordsToGuess.length)];
+        word2GuessArray = [];
+        for(var i = 0; i < word2Guess.length; i++){
+            word2GuessArray.push(word2Guess[i]);
+        }
+        displayedWord="_".repeat(word2Guess.length);
+        displayedWordArray =[];
+        for(var i = 0; i<displayedWord.length; i++){
+            displayedWordArray.push(displayedWord[i]);
+        }
+    }
 
-    }
-    else if (guessesLeft === 0){
+
+
+    //Losing the game
+    if (guessesLeft === 0){
         //Reset game
+        guessesLeft = 10;
+        charsGuessed=[];
+        word2Guess= wordsToGuess[Math.floor(Math.random()*wordsToGuess.length)];
+        word2GuessArray = [];
+        for(var i = 0; i < word2Guess.length; i++){
+            word2GuessArray.push(word2Guess[i]);
+        }
+        displayedWord="_".repeat(word2Guess.length);
+        displayedWordArray =[];
+        for(var i = 0; i<displayedWord.length; i++){
+            displayedWordArray.push(displayedWord[i]);
+        }
     }
+
 
 }
+
