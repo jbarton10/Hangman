@@ -28,15 +28,15 @@ body{
     bottom:-34px;
     right:349px;
     
-    color: lightgrey;
+    color:lightgoldenrodyellow;
     text-shadow: 2px 2px red;
 }
 
 #gameWindow{
-    width:480px;
+    width:500px;
     text-align: center;
-    border: 3px solid red;
-    background: grey;
+    border: 5px solid orangered;
+    background-color: rgb(91, 183, 214);
 }
 #wins,#currentWord,#guessesRemaining,#guessedLetters{
     font-size: 30px;
