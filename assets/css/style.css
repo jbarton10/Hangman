@@ -1,7 +1,11 @@
+@import url(/assets/super_smash_4_1_by_pokemon_diamond-d7zxu6d.ttf);
+
+
 body{
     margin:0px;
     padding:0px;
-    background-image: url("../images/redLogo.jpg")
+    background-image: url("../images/redLogo.jpg");
+    font-family: "Super Smash 4.1";
 }
 #container{
     max-width:960px;
@@ -10,20 +14,29 @@ body{
 
 #title{
     text-align: center;
+    position: relative;
+
     
-    margin-bottom: 100px;
+    
 }
 .title1{
-    font-size: 60px;
+    height:300px;
 }
-.title2{
+#hangman{
     font-size: 50px;
+    position: absolute;
+    bottom:-34px;
+    right:349px;
+    
+    color: lightgrey;
+    text-shadow: 2px 2px red;
 }
+
 #gameWindow{
     width:480px;
     text-align: center;
-    border: 3px solid yellow;
-    background: red;
+    border: 3px solid red;
+    background: grey;
 }
 #wins,#currentWord,#guessesRemaining,#guessedLetters{
     font-size: 30px;
