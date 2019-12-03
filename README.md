@@ -23,7 +23,7 @@ If this were to be deployed on a live server, all that would need to be done is 
 
 ## Authors
 
-* **Jamie Barton**  - [PurpleBooth](https://github.com/jbarton10)
+* **Jamie Barton**  - [GitHub](https://github.com/jbarton10)
 
 
 ## Acknowledgments
